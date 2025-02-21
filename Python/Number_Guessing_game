@@ -1,0 +1,27 @@
+import random
+#This is simple number guessing game in terminal. You have to pick number between 1 and 10. 
+a = random.randint(0, 10)
+
+print("This game involves guessing the correct number")
+print("Numbers are in range 0 - 10 ")
+
+
+mangida = 1
+
+while mangida == 1:
+    kasutaja_sisend = int(input("Guess number that is going out next: "))
+    if kasutaja_sisend < 0 or kasutaja_sisend > 10:
+        print("Input number in rage 0 - 10!")
+    if kasutaja_sisend < a:
+        print("You guessed too low")
+    elif kasutaja_sisend > a:
+        print("You guessed too high")
+    else:
+        print("Correct")
+        jatk = input("Do you want to play again (Y/N): ")
+        if jatk == "Y":
+            print("Game continues")
+        else:
+            break
+
+
